@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>player</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/player.css">
+</head>
+<body>
+
+
+
+
+
+    <!--播放器-->
+    <div class="player-container" id="player-container">
+        <!--控制面板-->
+        <div class="video-container" id="video-container">
+            <!--播放完成弹出框-->
+            <div class="player-ended">
+                <div class="ended-box">
+                    <div class="ended-tag clearfix">
+                        <div class="ended-left">
+                            <div class="pie-left">
+                                <div class="left"></div>
+                            </div>
+                            <div class="pie-right">
+                                <div class="right"></div>
+                            </div>
+                            <div class="mask"><span>5</span></div>
+                        </div>
+                        <div class="ended-right">
+                            <div class="ended-right-top clearfix">
+                                <span>本节学习已完成</span>
+                                <div class="share">
+                                    <span>分享到：</span>
+                                    <a class="jiathis_button_tsina"><i class="share1"></i></a>
+                                    <a class="jiathis_button_cqq"><i class="share2"></i></a>
+                                    <a class="jiathis_button_qzone"><i class="share3"></i></a>
+                                </div>
+                            </div>
+                            <div class="ended-right-bot">
+                                <span>即将进入下一节<b>CSS基础练习</b></span>
+                                <span class="replay"><i></i>重新播放</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>你可能会喜欢以下课程</span>
+                    <ul class="course-list">
+                        <li class="course-item1">
+                            <a href="#" target="_blank">
+                                <div class="imgbox">
+                                    <img src="../static/images/item.png" alt="HTML+CSS基础入门" class="course-img">
+                                </div>
+                                <button>开始学习</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="course-tag">
+                                    <p class="course-tag1">HTML+CSS基础入门</p>
+                                    <p class="course-tag2">317468人学习</p>
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../static/images/cece.png" alt="HTML+CSS基础入门" class="course-img">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="course-tag">
+                                    <p class="course-tag1">HTML+CSS基础入门</p>
+                                    <p class="course-tag2">317468人学习</p>
+                                </div>
+                                <div class="imgbox">
+                                    <img src="../static/images/cece.png" alt="HTML+CSS基础入门" class="course-img">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-content">
+                <video class="video" src="../video/dzq.mp4" id="video" preload="auto"></video>
+            </div>
+            <div class="full-box">
+                <div class="yz-progress-bar" id="progress">
+                <div class="total-bar">
+                    <div class="current-bar">
+
+                    </div>
+                    <i class="swipe_btn"></i>
+                </div>
+            </div>
+                <div class="control-bar">
+                <div class="control-left">
+                    <span class="play"></span>
+                    <span class="next"></span>
+                    <span class="current-time">00:00</span>
+                    <span>/</span>
+                    <span class="total-time"></span>
+                </div>
+                <div class="control-right">
+                    <div class="volume">
+                        <i></i>
+                         <div class="volume-box">
+                             <div class="volume-value">
+
+                             </div>
+                             <i class="volume-control"></i>
+                         </div>
+                    </div>
+                    <div class="speed">
+                        <span>1.0x</span>
+                        <ul>
+                            <li>2.0x</li>
+                            <li>1.5x</li>
+                            <li>1.25x</li>
+                            <li>1.0x</li>
+                        </ul>
+                    </div>
+                    <div class="fullscreen">
+
+                    </div>
+                    <div class="download">
+                        <a class="download-hover">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src='../static/js/video.js'></script>
+    <script src="../static/js/header.js"></script>
+</body>
+</html>
