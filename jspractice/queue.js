@@ -57,5 +57,30 @@
     console.log(q.empty());
     console.log(q.front());
     console.log(q.back());
+
+    //模拟方块舞
+    var dancers = ["F Alison McMillan",
+                    "M Frank Opitz",
+                    "M Frank Opitz",
+                    "M Mason McMilllan",
+                    "M Clayton Ruff",
+                    "F Cheryl Ferenback",
+                    "M Raymond Williams",
+                    "F Jennifer Ingram",
+                    "M Bryan Frazer",
+                    "M David Martin",
+                    "F Aurora Adney"];
+
+    function Dancer(name, sex) {
+        this.name = name;
+        this.sex  = sex;
+    }
+
+    function getDancers(males,females) {
+        var i;
+        for (i = 0; i < dancers.length; i++){
+            
+        }
+    }
 }());
 
