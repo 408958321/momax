@@ -47,6 +47,10 @@
         return len === 0;
     };
 
+    Queue.prototype.count = function (){
+        return this.dataStore.length;
+    };
+
     var a = ["yun","zhao","cc","hehe"];
     var q = new Queue();
     q.enqueue("hahhah");
@@ -71,16 +75,51 @@
                     "M David Martin",
                     "F Aurora Adney"];
 
-    function Dancer(name, sex) {
-        this.name = name;
+    function Dancer(firsname, sex) {
+        this.firstname = firsname;
         this.sex  = sex;
     }
 
     function getDancers(males,females) {
         var i;
-        for (i = 0; i < dancers.length; i++){
-            
+        var dancer;
+        var sex;
+        var name;
+        for (i = 0; i < dancers.length; i += 1){
+            dancer = dancers[i].split(' ');
+            sex    = dancer[0];
+            name   = dancer[1];
+            if( sex === "F") {
+                females.enqueue(new Dancer(name,sex));
+            }else {
+                males.enqueue(new Dancer(name,sex));
+            }
         }
+    }
+
+    function dance(males,females) {
+        var person;
+        console.log("The dance partners are: \n");
+
+        while (!females.empty() && !males.empty()) {
+            person = females.dequeue();
+            console.log("Female dancer is: "+ person.firstname);
+            person = males.dequeue();
+            console.log("Male dancer is: "+ person.firstname);
+        }
+    }
+
+    var maleDancers = new Queue();
+    var femaleDancers = new Queue();
+    getDancers(maleDancers,femaleDancers);
+    dance(maleDancers,femaleDancers);
+
+    if(maleDancers.count() > 0){
+        console.log("there are " + maleDancers.count() + " male dancers waiting to dance");
+    }
+
+    if(femaleDancers.count() > 0){
+        console.log("there are " + femaleDancers.count() + " female dancers waiting to dance");
     }
 }());
 
