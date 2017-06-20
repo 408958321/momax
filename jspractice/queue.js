@@ -121,5 +121,59 @@
     if(femaleDancers.count() > 0){
         console.log("there are " + femaleDancers.count() + " female dancers waiting to dance");
     }
+
+    //基数排序
+
+    function distribute(nums,queues,n,digit) {
+        var i;
+        for (i = 0; i < n; i += 1){
+            if (digit === 1) {
+                queues[nums[i]%10].enqueue(nums[i]);
+            }
+            else {
+                queues[Math.floor(nums[i] / 10)].enqueue(nums[i]);
+            }
+        }
+
+    }
+
+    function collect(queues, nums) {
+        var i = 0;
+        var digit;
+        for (digit = 0; digit < 10; digit += 1) {
+            while (!queues[digit].empty()) {
+
+                nums[i] = queues[digit].dequeue();
+                i += 1;
+            }
+        }
+    }
+
+    function dispArray(arr) {
+
+            console.log(arr+"");
+
+    }
+
+    var queues = [];
+    var j;
+    for (j = 0; j < 10; j += 1) {
+        queues[j] = new Queue();
+    }
+    var nums = [];
+
+    for (j = 0; j < 10; j += 1) {
+        nums[j] = Math.floor(Math.floor(Math.random() * 101));
+    }
+
+    console.log("Before radix sort: ");
+    dispArray(nums);
+    distribute(nums, queues, 10, 1);
+    collect(queues, nums);
+    distribute(nums, queues, 10, 10);
+    collect(queues, nums);
+    console.log("\n After radix sort: ");
+    dispArray(nums);
+
 }());
 
