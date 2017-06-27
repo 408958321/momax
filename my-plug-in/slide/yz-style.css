@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+
+.yyz-container{
+    border-bottom:1px solid #eeeeee;
+}
+.mz-wrap{
+    width: 1200px;
+    margin:  0 auto;
+}
+.yyz-slider{
+    position:relative;
+}
+.yyz-slider:hover{
+    cursor: pointer;
+}
+.yyz-slider>div{
+    width:938px;
+    height:421px;
+    overflow: hidden;
+    margin-left:131px;
+}
+.yyz-slider ul{
+    width:700%;
+    height:100%;
+    margin-left:-938px;
+}
+.yyz-slider ul li{
+    float:left;
+}
+.yyz-slider ul li a{
+    display: block;
+}
+.yyz-slider i{
+    position: absolute;
+    width:33px;
+    height:63px;
+    background-image:url(../../img/yz-sprite2.png);
+}
+.yyz-slider i:hover{
+    cursor: pointer;
+}
+.yyz-left{
+    background-position: -173px 0;
+    left:20px;
+    top:175px;
+}
+.yyz-right{
+    top:175px;
+    right:20px;
+    background-position: -173px -286px;
+}
+.yyz-slider:hover .yyz-left{
+    background-position: -173px -119px;
+}
+.yyz-slider:hover .yyz-right{
+    background-position: -173px -405px;
+}
+.yyz-slider ol{
+    width:216px;
+    margin:0 auto;
+    margin-top:50px;
+    margin-bottom:80px;
+}
+.yyz-slider ol li{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    border:1px solid #E4E4E4;
+    box-sizing:border-box;
+    margin-right:22px;
+    float: left;
+}
+.yyz-slider ol li:hover{
+    cursor: pointer;
+}
+.yyz-slider .yyz-active{
+    border: 2px solid #777777;
+}

@@ -1,4 +1,3 @@
 1.我的插件合集
-2.練習javascript
-3.練習python
-4.練習django
+
+2017.6.27 新增基于jquery的轮播插件
