@@ -58,7 +58,7 @@
         for (i = 0; i < leng; i += 1) {
             d.push(word[i]);
         }
-        while(!d.empty()) {
+        while (!d.empty()) {
             rword += d.pop();
         }
 
